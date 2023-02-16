@@ -20,24 +20,23 @@ import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundSetter;
 
 public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
-    //variables for Parameters: name, userFrench
+
     private final String name;
     private boolean useFrench;
 
-    //constructor for the input parameter "name"
     @DataBoundConstructor
     public HelloWorldBuilder(String name) {
         this.name = name;
     }
-    //getter for paramter "name"
+
     public String getName() {
         return name;
     }
-    //getter for useFrench boolean
+
     public boolean isUseFrench() {
         return useFrench;
     }
-    //setter that checks for useFrench parameter
+
     @DataBoundSetter
     public void setUseFrench(boolean useFrench) {
         this.useFrench = useFrench;
